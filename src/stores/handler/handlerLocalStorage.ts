@@ -17,6 +17,10 @@ class HandlerLocalStorage {
   update(key: string, newValue: object | undefined) {
     localStorage.setItem(key, JSON.stringify(newValue))
   }
+
+  delete(key: string) {
+    localStorage.removeItem(key)
+  }
 }
 
 export default HandlerLocalStorage
