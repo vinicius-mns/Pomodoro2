@@ -13,6 +13,10 @@ class HandlerLocalStorage {
       return JSON.parse(value)
     }
   }
+
+  update(key: string, newValue: object | undefined) {
+    localStorage.setItem(key, JSON.stringify(newValue))
+  }
 }
 
 export default HandlerLocalStorage
