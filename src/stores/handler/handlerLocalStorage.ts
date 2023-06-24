@@ -21,6 +21,10 @@ class HandlerLocalStorage {
   delete(key: string) {
     localStorage.removeItem(key)
   }
+
+  clearLocalStorage() {
+    localStorage.clear()
+  }
 }
 
 export default HandlerLocalStorage
