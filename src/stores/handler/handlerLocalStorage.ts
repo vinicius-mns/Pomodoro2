@@ -1,4 +1,4 @@
-class ApiLocalStorage {
+class HandlerLocalStorage {
 }
 
-export default ApiLocalStorage
+export default HandlerLocalStorage
