@@ -7,4 +7,8 @@ export default class HandleDate {
     const dayNumber = new Date().getDay()
     return this._Dayslist[dayNumber]
   }
+
+  public get daysOfWeek() {
+    return this._Dayslist
+  }
 }
