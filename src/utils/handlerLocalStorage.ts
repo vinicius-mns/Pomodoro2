@@ -10,12 +10,8 @@ export class HandlerStorage<T> {
     }
   }
 
-  getStorageByKey(key: string) {
-    const value = localStorage.getItem(key)
-
-    if(value){
-      return JSON.parse(value)
-    }
+  public get read (): T | T[] {
+    return JSON.parse(localStorage.getItem(this._key) as string)
   }
 
   update(key: string, newValue: object | undefined) {
