@@ -1,4 +1,4 @@
-export class HandlerStorage<T> {
+export class HandleStorage<T> {
   
   constructor(private _key: string, private _defaultValue: T | T[]){
     this._init()
