@@ -1,8 +1,12 @@
-class HandlerLocalStorage {
-  createIfNotExist(key: string, value: object | undefined) {
+export class HandlerStorage<T> {
+  
+  constructor(private _key: string, private _defaultValue: T | T[]){
+    this._init()
+  }
 
-    if(!localStorage.getItem(key)) {
-      localStorage.setItem(key, JSON.stringify(value))
+  private _init(): void {
+    if(!localStorage.getItem(this._key)) {
+      localStorage.setItem(this._key, JSON.stringify(this._defaultValue))
     }
   }
 
