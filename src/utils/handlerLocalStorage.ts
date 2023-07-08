@@ -18,8 +18,9 @@ export class HandlerStorage<T> {
     localStorage.setItem(this._key, JSON.stringify(newValue))
   }
 
-  delete(key: string) {
-    localStorage.removeItem(key)
+  public updateAndReturn (newValue: T | T[]): T | T[] {
+    this.update(newValue)
+    return this.read
   }
 
   clearLocalStorage() {
