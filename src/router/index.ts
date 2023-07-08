@@ -1,15 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import dinamicPage from '@/views/dinamicPage/dinamicPage.vue'
+import HandleDate from '@/utils/dates'
 
-const router = createRouter({
+const today = new HandleDate().toDay
+
+export default createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/:dia',
+      name: 'day',
+      component: dinamicPage,
+    },
+    {
       path: '/',
-      name: 'home',
-      component: HomeView
+      redirect: `/${today}`
     },
   ]
 })
-
-export default router
