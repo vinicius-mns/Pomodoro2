@@ -14,8 +14,8 @@ export class HandlerStorage<T> {
     return JSON.parse(localStorage.getItem(this._key) as string)
   }
 
-  update(key: string, newValue: object | undefined) {
-    localStorage.setItem(key, JSON.stringify(newValue))
+  public update (newValue: T | T[]): void {
+    localStorage.setItem(this._key, JSON.stringify(newValue))
   }
 
   delete(key: string) {
