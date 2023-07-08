@@ -23,9 +23,7 @@ export class HandlerStorage<T> {
     return this.read
   }
 
-  clearLocalStorage() {
-    localStorage.clear()
+  public delete () {
+    localStorage.removeItem(this._key)
   }
 }
-
-export default HandlerLocalStorage
