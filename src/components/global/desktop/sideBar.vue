@@ -9,8 +9,6 @@ import navBar from './navBar.vue';
 </template>
 
 <style scoped lang="scss">
-// desktop
-@media screen and (min-width: 1024px) {
 aside {
   width: 26%;
   height: 100vh;
