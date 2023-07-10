@@ -16,7 +16,9 @@ export default defineStore(globalStateName, () => {
 
   const state: IGlobalState[] = reactive(handleStorage.read as IGlobalState[])
 
+  const getPaths = state.map(({folderName}) => folderName)
+
   return {
-    state
+    getPaths,
   }
 })
